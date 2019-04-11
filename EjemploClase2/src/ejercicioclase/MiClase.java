@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ejemploclase2;
+package ejercicioclase;
 
 import java.util.Scanner;
 
@@ -11,17 +11,17 @@ import java.util.Scanner;
  *
  * @author Ricardo Freire
  */
-public class EjemploClase23 {
-
+public class MiClase {
+    
     /**
-     * @param args the command line arguments
+     * mi clase
      */
     public static void main(String[] args) {
-        // Este metodo es el principal de mi proyecto
-        // No olvidar ingresar valores
+        // 
         
-        String nombre, apellido, ciudad;
-        int edad;
+        String nombre, apellido, ciudad, pais;
+        int edad, nota1, nota2;
+        double promedio;
         Scanner entrada = new Scanner(System.in);
         
         System.out.println("Por favor ingrese su nombres");
@@ -37,12 +37,20 @@ public class EjemploClase23 {
         
         System.out.println("Por favor ingrese su ciudad");
         ciudad = entrada.nextLine();
-        /*
-        System.out.println("Su nombre es: "+nombre+"\n\n\t Su apellido "
-                +"es: "+apellido+", edad: "+edad+"\nCiudad: "+ciudad);
-       */
-        System.out.printf("Sus nombres es: %s \n\n\tSus apellidos es: %s\n"
-                + "edad es: %s\nCiudad: %s" ,nombre,apellido,edad,ciudad);
+        
+        System.out.println("Por favor ingrese su Pais");
+        pais = entrada.nextLine();
+        
+        System.out.println("Ingrese su primera nota");
+        nota1 = entrada.nextInt();
+        
+        System.out.println("Ingrese su segunda nota");
+        nota2 = entrada.nextInt();
+        
+        promedio = (nota1 + nota2)/2;
                 
-    } 
+        System.out.printf("Sus nombres y apellidos es: %s %s\nEdad: %s\nCiudad:"
+                + " %s\nPais: %s\nNotas: %s y %s \nPromedio: %s" 
+                ,nombre,apellido,edad,ciudad,pais,nota1,nota2,promedio);
+    }
 }
